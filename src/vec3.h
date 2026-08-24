@@ -31,3 +31,5 @@ class vec3
     }
     
 }; 
+
+#endif 
