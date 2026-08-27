@@ -1,15 +1,21 @@
 # PathTracer
 
-Learning path tracing from basically zero C++ knowledge.
+I'm 17 and started this with basically zero C++ knowledge.
 
-Following the famous ray tracing books and building everything myself — no copy-pasting (prolly).
+I wanted to build something fun, found *Ray Tracing in One Weekend*, and decided to follow it while learning C++ along the way.
 
-### Goal
+## Goal
 
-Literally make a path tracer.
+Make a path tracer.
 
-### Fun Facts
+## Current stuff
 
-- Started learning C++ from the site "LearnCpp", but I kinda have a very short attention span, so I gave up after a chapter... and a half.
-- Asked ChatGPT to gimme something fun to do, and it told me to make a path tracer.
-- hehe
+- Implemented ppm image
+- Implemented vec3 class
+- Implemented vec3 utilities
+
+## Fun Facts
+
+- Started with LearnCpp.
+- Gave up after about a chapter and a half.
+- 27-08-2026 — Found out about CUDA. Now I wanna learn that too.
