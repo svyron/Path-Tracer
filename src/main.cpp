@@ -1,3 +1,6 @@
+#include "vec3.h"
+#include "colour.h"
+
 #include <iostream> 
 
 int main() 
@@ -17,16 +20,9 @@ int main()
         
         for (int i = 0 ; i < iwidth ; i++) 
         {
-            auto r = double(i) / (iwidth - 1); // normalised red value | (iwidth - 1) cause pixels start from 0 to (iwidth - 1) and also to normalize the value of a pixel to be between 0 and 1
-            auto g = double(j) / (iheight - 1); // normalised green value
-            auto b = 0.00; // normalised blue value (no blue in this image) 
-
-            int ir = int(255.999 * r); // convert the normalized color value (0-1) to the PPM range (0-255)
-            int ig = int(255.999 * g); 
-            int ib = int(255.999 * b); 
-
-            std::cout << ir << " " << ig << " " << ib << "\n"; // printing the pixel values to the console 
-        } 
+            auto pixel_colour = colour(double(i) / (iwidth - 1), double(j) / (iheight - 1), 0); // to create a colour object with the RGB values of the pixel, the RGB values are calculated by dividing the pixel's x and y coordinates by the image width and height respectively, and the blue value is set to 0
+        write_colour(std::cout, pixel_colour); // to write the RGB values of the pixel to the output stream in the PPM format, the write_colour() function is called with the output stream and the colour object as arguments
+        }
         
     } 
     std::clog << "\rDone                                \n";
