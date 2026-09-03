@@ -22,7 +22,7 @@ class vec3
         // teaching the exisitng operator ([]) to the vec3 class to access the elements of the vector // "Give me a COPY of the double."
         double operator[](int i) const { return e[i]; } 
 
-        // teaching the existing operator ([]) to the vec3 class to access the elements of the vetor and MODIFY them 
+        // teaching the existing operator ([]) to the vec3 class to access the elements of the vector and MODIFY them 
         // "Give me the ORIGINAL double itself, by reference."
         double& operator[](int i) { return e[i]; } 
 
@@ -79,7 +79,7 @@ inline vec3 operator+(const vec3& u, const vec3& v)
 
 inline vec3 operator-(const vec3& u, const vec3& v) 
 {
-    return vec3(v.e[0] - u.e[0], v.e[1] - u.e[1], v.e[2] - u.e[2]); // return a new vector with the difference of the x, y, z values of the two vectors 
+    return vec3(u.e[0] - v.e[0], u.e[1] - v.e[1], u.e[2] - v.e[2]); // return a new vector with the difference of the x, y, z values of the two vectors 
 }
 
 inline vec3 operator*(const vec3& u, const vec3& v) 

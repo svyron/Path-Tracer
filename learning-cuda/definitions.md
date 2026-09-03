@@ -105,10 +105,61 @@ And we think -
    - A Fragment Shader executes for generated fragment invocations and computes outputs such as colour.    
 
 ## Fragment Shader 
+
 - A small program written in a specialized shading language (like GLSL or HLSL) that runs on the GPU. It's sole job in graphics is to calculate the final colour and properties of an individual pixel on the screen. 
 
   - Keep in mind - Defining a shader alone does not cause it to execute; a graphics draw operation must produce fragments through rasterization, which then triggers fragment-shader invocations.
 
   > Defining a Fragment Shader does not cause it to execute by itself. A graphics operation must generate fragment invocations for the shader to execute.
   
-  ## VRAM
+## VRAM 
+
+- Large, high-bandwith memory pool attached to the GPU, and the GPU uses it to hold data it needs for computation and graphics. 
+
+- VRAM is physically seperate from your normal system RAM on a typical discrete GPU. 
+
+```txt 
+         CPU 
+          |
+      System RAM 
+          |
+         PCIe 
+          |
+         GPU 
+   ┌───────────────┐
+   │   SMs / cores │
+   │   L1 cache    │
+   │   L2 cache    │
+   └───────┬───────┘
+           | 
+    VRAM (GPU DRAM) 
+``` 
+
+ - VRAM isn't the fastest memory available on the GPU. 
+ - The GPU has a hierarchy - 
+```txt 
+FASTEST --- registers 
+        --- shared memory 
+        --- L1 cache 
+        --- L2 cache 
+        --- VRAM / global memory 
+        --- system RAM 
+SLOWEST --- SSD 
+``` 
+
+- The fundamemtal idea is that smaller/faster memory is closer to the computation while larger/slower memory is farther away. 
+
+```txt 
+Imagine you ahve one thread like this - x = array[i] 
+Conceptually the GPU tries to get the data through the memory hierarchy. 
+
+If the data is in the nearby cache 
+L1 - hit - insanely quick 
+If not 
+L1 - miss - L2 - if miss - VRAM 
+``` 
+
+- The factory analogy works for this concept 
+
+> GPU performance is heavily influenced by keeping frequently reused data close to the computation. 
+
