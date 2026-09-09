@@ -90,3 +90,11 @@
     camera_center - vec3(0,0,focal_length) - viewport_u / 2 - viewport_v / 2; 
 
 - After everything, change the ray_colour function from the dummy black colour version to something like a blue sky as an example. 
+
+------------------------------------------------------------------------------------------
+
+# TAKING A BREAK FOR A FEW DAYS - WORKING ON BASICS OF GRAPHICS + CUDA  
+
+# DAY 8 - 09-09-2026 
+
+- Fundamentals of graphics - 1.1 , 1.2 , 1.3 , 1.4 , 1.5 
