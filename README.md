@@ -14,8 +14,10 @@ Make a path tracer.
 - Implemented vec3 class
 - Implemented vec3 utilities
 
-## Fun Facts
+## Others
 
 - Started with LearnCpp.
 - Gave up after about a chapter and a half.
 - 27-08-2026 — Found out about CUDA. Now I wanna learn that too.
+- 24-10-2026 - THIS IS TOUGH MAN. MANAGING COLLEGE + DOING WHATEVER U WANT IS TOUGH
+- I NEED to first learn CPP PROPERLY - without it working on the tracer is like putting ur head in a grinder 
