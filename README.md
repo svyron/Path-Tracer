@@ -21,3 +21,7 @@ Make a path tracer.
 - 27-08-2026 — Found out about CUDA. Now I wanna learn that too.
 - 24-10-2026 - THIS IS TOUGH MAN. MANAGING COLLEGE + DOING WHATEVER U WANT IS TOUGH
 - I NEED to first learn CPP PROPERLY - without it working on the tracer is like putting ur head in a grinder 
+
+## CHALLENGE 1 - 
+
+- 2 WEEK CHALLENGE - how much can I complete - PROGRESS -
